@@ -6,6 +6,7 @@ $contents = file_get_contents($file);
 
 $newContents = str_replace('function ctype_','function test_ctype_', $contents);
 $newContents = str_replace('ion_loaded(\'ctype\')', 'ion_loaded(\'fake\')', $newContents);
+$newContents = str_replace('function_exists(\'ctype', 'function_exists(\'test_ctype', $newContents);
 $newFile = __DIR__ . '/test_ctype.php';
 if (file_exists($newFile)) {
     unlink($newFile);
