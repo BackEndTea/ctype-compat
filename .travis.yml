@@ -1,0 +1,21 @@
+language: php
+
+dist: trusty
+
+php:
+  - 5.4
+  - 5.5
+  - 5.6
+  - 7.0
+  - 7.1
+  - 7.2
+
+matrix:
+  include:
+    # PHP 5.3 doesn't install on Trusty on Travis: https://github.com/travis-ci/travis-ci/issues/8219
+    - php: 5.3
+    dist: precise
+
+sudo: false
+
+script: php tests/tests.php

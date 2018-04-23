@@ -1,0 +1,12 @@
+{
+    "name": "backendtea/ctype-compat",
+    "description": "Compatability for those who have disabled it",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^5.3||^7.0"
+    },
+    "autoload": {
+        "files": ["src/ctype.php"]
+    }
+}

@@ -1,0 +1,8 @@
+.idea/
+
+composer.lock
+/vendor/
+
+
+#Custom test stuff
+tests/test_ctype.php
