@@ -18,4 +18,8 @@ matrix:
 
 sudo: false
 
-script: php tests/tests.php
+install: composer install
+
+script:
+  - php tests/tests.php
+  - composer validate --strict

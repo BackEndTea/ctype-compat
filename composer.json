@@ -1,12 +1,29 @@
 {
     "name": "backendtea/ctype-compat",
-    "description": "Compatability for those who have disabled it",
     "type": "library",
+    "description": "Compatibility for those who have disabled ctype",
+    "keywords": [
+        "ctype",
+        "compatibility",
+        "polyfill",
+        "compat"
+    ],
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Gert de Pagter",
+            "email": "BackEndTea@gmail.com"
+        }
+    ],
     "require": {
-        "php": "^5.3||^7.0"
+        "php": "^5.3 || ^7.0"
     },
     "autoload": {
-        "files": ["src/ctype.php"]
+        "files": [
+            "src/ctype.php"
+        ]
+    },
+    "support": {
+        "issues": "https://github.com/backendtea/ctype-compat/issues"
     }
 }

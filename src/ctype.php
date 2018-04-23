@@ -25,7 +25,7 @@ if (!extension_loaded('ctype')) {
          */
         function ctype_alnum($text)
         {
-            $text = conver_int_to_char_for_ctype($text);
+            $text = convert_int_to_char_for_ctype($text);
 
             return !empty($text) && !preg_match('/[^A-Za-z0-9]/', $text);
         }
@@ -43,7 +43,7 @@ if (!extension_loaded('ctype')) {
          */
         function ctype_alpha($text)
         {
-            $text = conver_int_to_char_for_ctype($text);
+            $text = convert_int_to_char_for_ctype($text);
 
             return !empty($text) && !preg_match('/[^A-Za-z]/', $text);
         }
@@ -61,7 +61,7 @@ if (!extension_loaded('ctype')) {
          */
         function ctype_cntrl($text)
         {
-            $text = conver_int_to_char_for_ctype($text);
+            $text = convert_int_to_char_for_ctype($text);
 
             return !empty($text) && !preg_match('/[^\x00-\x1f\x7f]/', $text);
         }
@@ -79,7 +79,7 @@ if (!extension_loaded('ctype')) {
          */
         function ctype_digit($text)
         {
-            $text = conver_int_to_char_for_ctype($text);
+            $text = convert_int_to_char_for_ctype($text);
 
             return !empty($text) && !preg_match('/[^0-9]/', $text);
         }
@@ -97,7 +97,7 @@ if (!extension_loaded('ctype')) {
          */
         function ctype_graph($text)
         {
-            $text = conver_int_to_char_for_ctype($text);
+            $text = convert_int_to_char_for_ctype($text);
 
             return !empty($text) && !preg_match('/[^!-~]/', $text);
         }
@@ -115,7 +115,7 @@ if (!extension_loaded('ctype')) {
          */
         function ctype_lower($text)
         {
-            $text = conver_int_to_char_for_ctype($text);
+            $text = convert_int_to_char_for_ctype($text);
 
             return !empty($text) && !preg_match('/[^a-z]/', $text);
         }
@@ -133,7 +133,7 @@ if (!extension_loaded('ctype')) {
          */
         function ctype_print($text)
         {
-            $text = conver_int_to_char_for_ctype($text);
+            $text = convert_int_to_char_for_ctype($text);
 
             return !empty($text) && !preg_match('/[^ -~]/', $text);
         }
@@ -151,7 +151,7 @@ if (!extension_loaded('ctype')) {
          */
         function ctype_punct($text)
         {
-            $text = conver_int_to_char_for_ctype($text);
+            $text = convert_int_to_char_for_ctype($text);
 
             return !empty($text) && !preg_match('/[^!-\/\:-@\[-`\{-~]/', $text);
         }
@@ -169,7 +169,7 @@ if (!extension_loaded('ctype')) {
          */
         function ctype_space($text)
         {
-            $text = conver_int_to_char_for_ctype($text);
+            $text = convert_int_to_char_for_ctype($text);
 
             return !empty($text) && !preg_match('/[^\s]/', $text);
         }
@@ -188,7 +188,7 @@ if (!extension_loaded('ctype')) {
          */
         function ctype_upper($text)
         {
-            $text = conver_int_to_char_for_ctype($text);
+            $text = convert_int_to_char_for_ctype($text);
 
             return !empty($text) && !preg_match('/[^A-Z]/', $text);
         }
@@ -206,19 +206,23 @@ if (!extension_loaded('ctype')) {
          */
         function ctype_xdigit($text)
         {
-            $text = conver_int_to_char_for_ctype($text);
+            $text = convert_int_to_char_for_ctype($text);
 
             return !empty($text) && !preg_match('/[^A-Fa-f0-9]/', $text);
         }
     }
 
-    if (!function_exists('conver_int_to_char_for_ctype')) {
+    if (!function_exists('convert_int_to_char_for_ctype')) {
         /**
+         * Converts integers to their char versions according to normal ctype behaviour, if needed.
+         *
          * @internal
+         *
          * @param string|int $int
+         *
          * @return string
          */
-        function conver_int_to_char_for_ctype($int)
+        function convert_int_to_char_for_ctype($int)
         {
             if(!is_integer($int)) {
                 return $int;
