@@ -14,7 +14,7 @@ matrix:
   include:
     # PHP 5.3 doesn't install on Trusty on Travis: https://github.com/travis-ci/travis-ci/issues/8219
     - php: 5.3
-    dist: precise
+      dist: precise
 
 sudo: false
 
