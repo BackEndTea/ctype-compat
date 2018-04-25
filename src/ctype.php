@@ -25,9 +25,11 @@ if (!extension_loaded('ctype')) {
          */
         function ctype_alnum($text)
         {
-            $text = convert_int_to_char_for_ctype($text);
-
-            return !empty($text) && !preg_match('/[^A-Za-z0-9]/', $text);
+            return !empty($text) &&
+                !preg_match(
+                    '/[^A-Za-z0-9]/',
+                    convert_int_to_char_for_ctype($text)
+                );
         }
     }
 
@@ -43,9 +45,11 @@ if (!extension_loaded('ctype')) {
          */
         function ctype_alpha($text)
         {
-            $text = convert_int_to_char_for_ctype($text);
-
-            return !empty($text) && !preg_match('/[^A-Za-z]/', $text);
+            return !empty($text) &&
+                !preg_match(
+                    '/[^A-Za-z]/',
+                    convert_int_to_char_for_ctype($text)
+                );
         }
     }
 
@@ -61,9 +65,11 @@ if (!extension_loaded('ctype')) {
          */
         function ctype_cntrl($text)
         {
-            $text = convert_int_to_char_for_ctype($text);
-
-            return !empty($text) && !preg_match('/[^\x00-\x1f\x7f]/', $text);
+            return !empty($text) &&
+                !preg_match(
+                    '/[^\x00-\x1f\x7f]/',
+                    convert_int_to_char_for_ctype($text)
+                );
         }
     }
 
@@ -79,9 +85,11 @@ if (!extension_loaded('ctype')) {
          */
         function ctype_digit($text)
         {
-            $text = convert_int_to_char_for_ctype($text);
-
-            return !empty($text) && !preg_match('/[^0-9]/', $text);
+            return !empty($text) &&
+                !preg_match(
+                    '/[^0-9]/',
+                    convert_int_to_char_for_ctype($text)
+                );
         }
     }
 
@@ -97,9 +105,11 @@ if (!extension_loaded('ctype')) {
          */
         function ctype_graph($text)
         {
-            $text = convert_int_to_char_for_ctype($text);
-
-            return !empty($text) && !preg_match('/[^!-~]/', $text);
+            return !empty($text) &&
+                !preg_match(
+                    '/[^!-~]/',
+                    convert_int_to_char_for_ctype($text)
+                );
         }
     }
 
@@ -115,9 +125,11 @@ if (!extension_loaded('ctype')) {
          */
         function ctype_lower($text)
         {
-            $text = convert_int_to_char_for_ctype($text);
-
-            return !empty($text) && !preg_match('/[^a-z]/', $text);
+            return !empty($text) &&
+                !preg_match(
+                    '/[^a-z]/',
+                    convert_int_to_char_for_ctype($text)
+                );
         }
     }
 
@@ -133,9 +145,11 @@ if (!extension_loaded('ctype')) {
          */
         function ctype_print($text)
         {
-            $text = convert_int_to_char_for_ctype($text);
-
-            return !empty($text) && !preg_match('/[^ -~]/', $text);
+            return !empty($text) &&
+                !preg_match(
+                    '/[^ -~]/',
+                    convert_int_to_char_for_ctype($text)
+                );
         }
     }
 
@@ -151,9 +165,11 @@ if (!extension_loaded('ctype')) {
          */
         function ctype_punct($text)
         {
-            $text = convert_int_to_char_for_ctype($text);
-
-            return !empty($text) && !preg_match('/[^!-\/\:-@\[-`\{-~]/', $text);
+            return !empty($text) &&
+                !preg_match(
+                    '/[^!-\/\:-@\[-`\{-~]/',
+                    convert_int_to_char_for_ctype($text)
+                );
         }
     }
 
@@ -169,9 +185,11 @@ if (!extension_loaded('ctype')) {
          */
         function ctype_space($text)
         {
-            $text = convert_int_to_char_for_ctype($text);
-
-            return !empty($text) && !preg_match('/[^\s]/', $text);
+            return !empty($text) &&
+                !preg_match(
+                    '/[^\s]/',
+                    convert_int_to_char_for_ctype($text)
+                );
         }
     }
 
@@ -188,9 +206,11 @@ if (!extension_loaded('ctype')) {
          */
         function ctype_upper($text)
         {
-            $text = convert_int_to_char_for_ctype($text);
-
-            return !empty($text) && !preg_match('/[^A-Z]/', $text);
+            return !empty($text) &&
+                !preg_match(
+                    '/[^A-Z]/',
+                    convert_int_to_char_for_ctype($text)
+                );
         }
     }
 
@@ -206,9 +226,11 @@ if (!extension_loaded('ctype')) {
          */
         function ctype_xdigit($text)
         {
-            $text = convert_int_to_char_for_ctype($text);
-
-            return !empty($text) && !preg_match('/[^A-Fa-f0-9]/', $text);
+            return !empty($text) &&
+                !preg_match(
+                    '/[^A-Fa-f0-9]/',
+                    convert_int_to_char_for_ctype($text)
+                );
         }
     }
 
