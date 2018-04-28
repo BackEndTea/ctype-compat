@@ -6,6 +6,8 @@
 [![Downloads](https://img.shields.io/packagist/dt/backendtea/ctype-compat.svg)](https://packagist.org/packages/backendtea/ctype-compat)
 
 
+**This Package has been deprecated, please use symfony/polyfill-ctype instead.**
+
 A package to make sure ctype functions still work, even if a php version is used that was compiled with `--disable-ctype`.
 If ctype is enabled this package will do nothing, if ctype is disabled this package will provide these functions.
 Instead of crashing when they can't be found.
